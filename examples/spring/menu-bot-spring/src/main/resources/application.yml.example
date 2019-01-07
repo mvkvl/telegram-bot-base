@@ -1,0 +1,17 @@
+bot:
+  token:    <your bot token>
+  username: <your bot name>
+  owner_id: <your telegram id>
+
+# if need to connect to telegram via proxy
+proxy: http://127.0.0.1:8123
+
+logging:
+#  file: telebot.log
+  pattern:
+    console: "%d %-5level [%thread] %logger : %msg%n"
+#    file:    "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    console: ERROR
+    root:    ERROR
+    ws.slink.telegram: TRACE

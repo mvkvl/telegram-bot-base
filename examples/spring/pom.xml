@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>ws.slink.telegram</groupId>
+    <artifactId>telebot-spring-examples</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <ws.slink.bots.version>1.0</ws.slink.bots.version>
+        <telegram-spring-boot-starter.version>0.19</telegram-spring-boot-starter.version>
+    </properties>
+
+    <modules>
+        <module>echo-bot-spring</module>
+        <module>menu-bot-spring</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.xabgesagtx</groupId>
+            <artifactId>telegram-spring-boot-starter</artifactId>
+            <version>${telegram-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ws.slink.telegram</groupId>
+            <artifactId>bot-builder-spring</artifactId>
+            <version>${ws.slink.bots.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

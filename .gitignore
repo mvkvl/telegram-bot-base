@@ -1,0 +1,5 @@
+**/bot.conf
+**/application.yml
+**/target
+**/.idea
+**/*.iml

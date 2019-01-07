@@ -1,0 +1,8 @@
+telegram:
+  name:  <bot name>
+  token: <bot token>
+  chat:  <owner chat id>
+
+proxy:
+  host: <host>
+  port: <port>
